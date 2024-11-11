@@ -35,8 +35,7 @@ public class GameController : MonoBehaviour
                 //x轴随机生成物体位置
                 spawnPosition.z = spawnValues.z; //z轴不需要赋值
                 spawnRotation = Quaternion.identity; //随机旋转 无旋转
-                Instantiate(hazard[num], spawnPosition, spawnRotation);
-                //实例化陨石物体，位置，旋转
+                Instantiate(hazard[num], spawnPosition, spawnRotation); //实例化陨石物体，位置，旋转
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);
@@ -45,7 +44,7 @@ public class GameController : MonoBehaviour
             {
                 restartText.text = "按R键开始";
                 restart = true;
-                break;  //擦除
+                break;
             }
         }
     }
@@ -72,8 +71,7 @@ public class GameController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                Application.LoadLevel(Application.loadedLevel);
-                //重新读取关卡
+                Application.LoadLevel(Application.loadedLevel); //重新读取关卡
             }
         }
     }

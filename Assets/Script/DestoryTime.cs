@@ -8,7 +8,7 @@ public class DestoryTime : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject,lifetime); //在lifetime后销毁游戏物体
+        Destroy(gameObject,lifetime);
     }
 
     // Update is called once per frame
